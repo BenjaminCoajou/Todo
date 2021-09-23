@@ -5,7 +5,7 @@ import NewTask from '../NewTask';
 import Tasks from '../Tasks';
 
 const App = () => (
-    <div className="App">
+    <div className="App m-auto">
       <NewTask/>
       <Tasks/>
     </div>
