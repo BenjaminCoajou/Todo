@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './App.css';
-import NewTask from '../NewTask';
+import NewTask from '../../containers/NewTask';
 import Tasks from '../Tasks';
 import Filter from '../Filter';
 
