@@ -1,19 +1,32 @@
-import { NEW_TASK } from "../actions/newTask";
+import {INPUT_CHANGE, SUBMIT_TASK} from '../actions/newTask';
 
 const initialState = {
-    task: [],
-};
-
-const newTask = (state = initialState, action = {}) => {
-    switch(action.type) {
-        case NEW_TASK:
-            return {
-                ...state,
-                task: [action.payload],
-            };
-            default:
-                return state;
+    task: {
+        content: '',
+        status: '1',
     }
 };
 
-export default newTask;
+const newtask = (state = initialState, action = {}) => {
+    switch (action.type) {
+      case INPUT_CHANGE:
+        return {
+          ...state,
+          task: {
+              ...state.task,
+              ...action.payload,
+          }
+        };
+        case SUBMIT_TASK:
+        return {
+          ...state,
+          task: {
+            content:'',
+          }
+        };
+      default:
+        return state;
+    }
+  };
+  
+  export default newtask;

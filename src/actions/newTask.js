@@ -1,6 +1,12 @@
-export const NEW_TASK = 'NEW__TASK';
+export const SUBMIT_TASK = 'SUBMIT_TASK';
+export const INPUT_CHANGE = 'INPUT_CHANGE';
 
-export const newTask = (payload) => ({
-    type: NEW_TASK,
-    payload
+export const submitTask = (payload) => ({
+    type: SUBMIT_TASK,
+    payload,
+})
+
+export const inputChange = (payload) => ({
+    type: INPUT_CHANGE,
+    payload,
 });
