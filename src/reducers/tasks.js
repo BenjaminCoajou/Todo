@@ -1,4 +1,5 @@
 import {SUBMIT_TASK} from '../actions/newTask';
+import {DO_TASK} from '../actions/tasks';
 
 const initialState = {
     todotask: []
@@ -14,6 +15,13 @@ const tasks = (state = initialState, action = {}) => {
               {...action.payload,
           }]
         };
+        case DO_TASK:
+          return {
+            ...state,
+            todotask: [
+              ...state.todotask,
+            ]
+              }
       default:
         return state;
     }

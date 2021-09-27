@@ -3,7 +3,6 @@ import {INPUT_CHANGE, SUBMIT_TASK} from '../actions/newTask';
 const initialState = {
     task: {
         content: '',
-        status: '1',
     }
 };
 
